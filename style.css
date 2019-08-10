@@ -1,0 +1,140 @@
+/*PROJECT:
+CODE WRITTEN BY: Luis Febro
+GOAL:
+DATE OF LAUNCH: */
+
+/*GENERAL ELEMENT TWEAKS*/
+* {
+    box-sizing: border-box;
+}
+
+/*adjust full screen for landing page*/
+body,
+html {
+    width: 100%;
+    height: 100%;
+
+    /*Box Model*/
+    margin: 0;
+    padding: 0;
+    /*Text*/
+    text-align: justify;
+    font: bold 1.3em/1.6em 'Montserrat', Cursive, sans-serif;
+    color: #fff;
+
+    word-wrap: break-word;
+}
+
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+figcaption {
+    position: relative;
+    top: -10px;
+
+    text-align: right;
+    font: normal 15px verdana, sans-serif;
+}
+
+hr {
+  max-width: 65px;
+  border-width: 3px;
+  border-color: #F05F44;
+}
+
+/*ELEMENT SELECTORS*/
+.btn-xl {
+  padding: .2rem 1rem;
+  margin-bottom: 2rem;
+}
+
+/*header.startup {
+  background: center url("https://i.imgur.com/CH75F3o.png") #000;
+  background-size: cover;
+  height: 100%;
+}*/
+header.startup {
+  background: 100% 100% url("header.jpg") fixed;
+  background-size: cover;
+}
+
+/*BUTTONS*/
+
+/*CONTAINERS*/
+
+/*SHADOW*/
+.shadow {
+    box-shadow: 0 1px 18px 0 rgba(0, 0, 0, .2),
+        0 6px 20px 0 rgba(0, 0, 0, .19);
+}
+
+.shadowPrecise {
+    -webkit-filter: drop-shadow(5px 5px 10px #000);
+    filter: drop-shadow(5px 5px 10px #000);
+}
+
+/*ALIGN*/
+/*width and height to child element as needed*/
+.alignElemCenter {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+
+    align-self: flex-start;
+}
+
+
+.alignElems_flexColumn {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnRipple {
+    position: relative;
+    background-color: #663399;
+    border: none;
+    font-size: 28px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.btnRipple:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.btnRipple:active:after,
+.btnRipple:hover:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+.btnRipple:hover {
+    background-color: purple;
+}
